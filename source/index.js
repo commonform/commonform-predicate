@@ -24,4 +24,4 @@ exports.text = function(argument) {
   return typeof argument === 'string';
 };
 
-exports.version = '0.0.0-prerelease';
+exports.version = '0.1.0';
