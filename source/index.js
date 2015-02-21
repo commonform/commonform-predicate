@@ -1,7 +1,11 @@
 var hasProperty = function(propertyName, object) {
   return (
     // Immutable API
-    (typeof object.has === 'function' && object.has(propertyName)) ||
+    (
+      object.has &&
+      typeof object.has === 'function' &&
+      object.has(propertyName)
+    ) ||
     // Plain Object API
     (object.hasOwnProperty(propertyName))
   );
