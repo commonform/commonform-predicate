@@ -13,14 +13,14 @@ var hasProperty = function(propertyName, object) {
 
 [
   'definition',
-  'field',
+  'insertion',
   'reference',
   'use'
 ].forEach(function(type) {
   exports[type] = hasProperty.bind(this, type);
 });
 
-exports.subForm = hasProperty.bind(this, 'form');
+exports.inclusion = hasProperty.bind(this, 'form');
 
 exports.form = hasProperty.bind(this, 'content');
 

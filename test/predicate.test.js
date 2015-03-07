@@ -18,7 +18,7 @@ describe('predicate', function() {
 
     it('returns true for a valid definition', function() {
       var argument = {definition: 'Term'};
-      expect(validate.definition(argument))
+      expect(validate.definition(immutable(argument)))
         .to.be.true();
       expect(predicate.definition(argument))
         .to.be.true();
@@ -28,7 +28,7 @@ describe('predicate', function() {
 
     it('returns false for an invalid definition', function() {
       var argument = {invalid: 'object'};
-      expect(validate.definition(argument))
+      expect(validate.definition(immutable(argument)))
         .to.be.false();
       expect(predicate.definition(argument))
         .to.be.false();
@@ -45,7 +45,7 @@ describe('predicate', function() {
 
     it('returns true for a valid use', function() {
       var argument = {use: 'Term'};
-      expect(validate.use(argument))
+      expect(validate.use(immutable(argument)))
         .to.be.true();
       expect(predicate.use(argument))
         .to.be.true();
@@ -55,7 +55,7 @@ describe('predicate', function() {
 
     it('returns false for an invalid use', function() {
       var argument = {term: 'Term'};
-      expect(validate.use(argument))
+      expect(validate.use(immutable(argument)))
         .to.be.false();
       expect(predicate.use(argument))
         .to.be.false();
@@ -72,7 +72,7 @@ describe('predicate', function() {
 
     it('returns true for a valid reference', function() {
       var argument = {reference: 'Term'};
-      expect(validate.reference(argument))
+      expect(validate.reference(immutable(argument)))
         .to.be.true();
       expect(predicate.reference(argument))
         .to.be.true();
@@ -82,7 +82,7 @@ describe('predicate', function() {
 
     it('returns false for an invalid reference', function() {
       var argument = {invalid: 'object'};
-      expect(validate.reference(argument))
+      expect(validate.reference(immutable(argument)))
         .to.be.false();
       expect(predicate.reference(argument))
         .to.be.false();
@@ -91,61 +91,61 @@ describe('predicate', function() {
     });
   });
 
-  describe('field', function() {
+  describe('insertion', function() {
     it('is a function', function() {
-      expect(predicate.field)
+      expect(predicate.insertion)
         .to.be.a('function');
     });
 
-    it('returns true for a valid field', function() {
-      var argument = {field: 'Value'};
-      expect(validate.field(argument))
+    it('returns true for a valid insertion', function() {
+      var argument = {insertion: 'Value'};
+      expect(validate.insertion(immutable(argument)))
         .to.be.true();
-      expect(predicate.field(argument))
+      expect(predicate.insertion(argument))
         .to.be.true();
-      expect(predicate.field(immutable(argument)))
+      expect(predicate.insertion(immutable(argument)))
         .to.be.true();
     });
 
-    it('returns false for an invalid field', function() {
+    it('returns false for an invalid insertion', function() {
       var argument = {invalid: 'object'};
-      expect(validate.field(argument))
+      expect(validate.insertion(immutable(argument)))
         .to.be.false();
-      expect(predicate.field(argument))
+      expect(predicate.insertion(argument))
         .to.be.false();
-      expect(predicate.field(immutable(argument)))
+      expect(predicate.insertion(immutable(argument)))
         .to.be.false();
     });
   });
 
-  describe('subForm', function() {
+  describe('inclusion', function() {
     it('is a function', function() {
-      expect(predicate.subForm)
+      expect(predicate.inclusion)
         .to.be.a('function');
     });
 
-    it('returns true for a valid sub-form', function() {
+    it('returns true for a valid inclusion', function() {
       var argument = {
-        summary: 'Summary',
+        heading: 'Summary',
         form: {
           content: ['Text']
         }
       };
-      expect(validate.nestedSubForm(argument))
+      expect(validate.nestedInclusion(immutable(argument)))
         .to.be.true();
-      expect(predicate.subForm(argument))
+      expect(predicate.inclusion(argument))
         .to.be.true();
-      expect(predicate.subForm(immutable(argument)))
+      expect(predicate.inclusion(immutable(argument)))
         .to.be.true();
     });
 
     it('returns false for an invalid sub-form', function() {
       var argument = {invalid: 'object'};
-      expect(validate.subForm(argument))
+      expect(validate.inclusion(immutable(argument)))
         .to.be.false();
-      expect(predicate.subForm(argument))
+      expect(predicate.inclusion(argument))
         .to.be.false();
-      expect(predicate.subForm(immutable(argument)))
+      expect(predicate.inclusion(immutable(argument)))
         .to.be.false();
     });
   });
