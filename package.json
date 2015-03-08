@@ -1,4 +1,7 @@
 {
+  "name": "commonform-predicate",
+  "description": "distinguish Common Form content objects",
+  "version": "0.1.0",
   "author": {
     "name": "Kyle E. Mitchell",
     "email": "kyle@kemitchell.com",
@@ -7,7 +10,6 @@
   "bugs": {
     "url": "https://github.com/commonform/commonform-predicate/issues"
   },
-  "description": "distinguish Common Form content objects",
   "devDependencies": {
     "chai": "^1.10.0",
     "check-versions": "0.0.1",
@@ -27,7 +29,6 @@
   ],
   "license": "Apache-2.0",
   "main": "source/index",
-  "name": "commonform-predicate",
   "repository": {
     "type": "git",
     "url": "https://github.com/commonform/commonform-predicate.git"
@@ -39,6 +40,5 @@
     "pre-commit": "npm run lint && npm run check && npm run coverage",
     "test": "mocha",
     "travis-ci": "npm run pre-commit"
-  },
-  "version": "0.1.0"
+  }
 }
