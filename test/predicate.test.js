@@ -127,7 +127,7 @@ describe('predicate', function() {
     it('returns true for a valid inclusion', function() {
       var argument = {
         heading: 'Summary',
-        form: {
+        inclusion: {
           content: ['Text']
         }
       };
@@ -139,7 +139,7 @@ describe('predicate', function() {
         .to.be.true();
     });
 
-    it('returns false for an invalid sub-form', function() {
+    it('returns false for an invalid inclusion', function() {
       var argument = {invalid: 'object'};
       expect(validate.inclusion(immutable(argument)))
         .to.be.false();

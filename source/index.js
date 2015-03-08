@@ -20,7 +20,7 @@ var hasProperty = function(propertyName, object) {
   exports[type] = hasProperty.bind(this, type);
 });
 
-exports.inclusion = hasProperty.bind(this, 'form');
+exports.inclusion = hasProperty.bind(this, 'inclusion');
 
 exports.form = hasProperty.bind(this, 'content');
 
