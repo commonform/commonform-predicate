@@ -28,4 +28,4 @@ exports.text = function(argument) {
   return typeof argument === 'string';
 };
 
-exports.version = '0.2.1';
+exports.version = '0.3.0';
