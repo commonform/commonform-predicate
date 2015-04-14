@@ -1,31 +1,17 @@
-var hasProperty = function(propertyName, object) {
-  return (
-    // Immutable API
-    (
-      object.has &&
-      typeof object.has === 'function' &&
-      object.has(propertyName)
-    ) ||
-    // Plain Object API
-    (object.hasOwnProperty(propertyName))
-  );
+var has = function(key) {
+  return function(argument) {
+    return argument.hasOwnProperty(key);
+  };
 };
 
-[
-  'definition',
-  'insertion',
-  'reference',
-  'use'
-].forEach(function(type) {
-  exports[type] = hasProperty.bind(this, type);
+['blank', 'definition', 'reference', 'use'].forEach(function(type) {
+  exports[type] = has(type);
 });
 
-exports.inclusion = hasProperty.bind(this, 'inclusion');
+exports.child = has('form');
 
-exports.form = hasProperty.bind(this, 'content');
+exports.form = has('content');
 
-exports.text = function(argument) {
-  return typeof argument === 'string';
-};
+exports.text = require('is-string');
 
-exports.version = '0.3.0';
+exports.version = '1.0.0-rc1';
