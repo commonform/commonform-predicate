@@ -14,4 +14,4 @@ exports.form = has('content');
 
 exports.text = require('is-string');
 
-exports.version = '1.0.0-rc1';
+exports.version = '0.4.0';
