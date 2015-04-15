@@ -1,14 +1,10 @@
 *.tgz
 .editorconfig
-.gitattributes
 .gitignore
 .istanbul.yml
 .jscsrc
-.jshintignore
 .jshintrc
 .npmignore
 .travis.yml
-CONTRIBUTING.md
-bower.json
 coverage/
 test/
