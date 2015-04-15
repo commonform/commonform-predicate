@@ -8,7 +8,7 @@
     "is-string": "^1.0.4"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
+    "chai": "^2.2.0",
     "check-versions": "^1.0.0",
     "commonform-validate": "^0.4.0",
     "istanbul": "^0.3.5",
