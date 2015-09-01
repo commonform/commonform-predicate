@@ -22,7 +22,6 @@
     "predicates"
   ],
   "license": "Apache-2.0",
-  "main": "source/index",
   "peerDependencies": {
     "commonform": "1.x"
   },
