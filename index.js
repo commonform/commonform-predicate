@@ -1,17 +1,13 @@
 var has = function(key) {
   return function(argument) {
-    return argument.hasOwnProperty(key);
-  };
-};
+    return argument.hasOwnProperty(key) } }
 
-['blank', 'definition', 'reference', 'use'].forEach(function(type) {
-  exports[type] = has(type);
-});
+['blank', 'definition', 'reference', 'use']
+  .forEach(function(type) {
+    exports[type] = has(type) })
 
-exports.child = has('form');
+exports.child = has('form')
 
-exports.form = has('content');
+exports.form = has('content')
 
-exports.text = require('is-string');
-
-exports.version = '0.4.0';
+exports.text = require('is-string')
