@@ -1,7 +1,27 @@
-commonform-predicate
-====================
+```javascript
+var predicate = require('commonform-predicate');
+var assert = require('assert');
 
-[![NPM version](https://img.shields.io/npm/v/commonform-predicate.svg)](https://www.npmjs.com/package/commonform-predicate)
-[![build status](https://img.shields.io/travis/commonform/commonform-predicate.svg)](http://travis-ci.org/commonform/commonform-predicate)
+var invalid = {invalid: 'object'};
+var validForm = {
+  content: ['Valid text']
+};
 
-Distinguish Common Form content objects.
+assert(predicate.definition({definition: 'Term'}))
+assert(!predicate.definition(invalid))
+
+assert(predicate.use({use: 'Term'}))
+assert(!predicate.use({term: 'Term'}))
+
+assert(predicate.reference({reference: 'Term'}))
+assert(!predicate.reference(invalid))
+
+assert(predicate.blank({blank: 'Value'}))
+assert(!predicate.blank(invalid))
+
+assert(predicate.child({headuing: 'Summary', form: validForm}))
+assert(!predicate.child(invalid))
+
+assert(predicate.text('Text'))
+assert(!predicate.text(null))
+```
