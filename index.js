@@ -10,4 +10,5 @@ exports.child = has('form')
 
 exports.form = has('content')
 
-exports.text = require('is-string')
+exports.text = function(argument) {
+  return ( typeof argument === 'string' ) }
