@@ -27,6 +27,8 @@ types.forEach(function (type) {
 
 exports.child = has('form')
 
+exports.component = has('repository')
+
 exports.form = has('content')
 
 exports.text = function (argument) {

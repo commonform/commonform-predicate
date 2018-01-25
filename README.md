@@ -27,6 +27,25 @@ assert(!predicate.blank(invalid))
 assert(predicate.child({heading: 'Summary', form: validForm}))
 assert(!predicate.child(invalid))
 
+assert(predicate.component({
+  heading: 'Warranty Disclaimer',
+  repository: 'api.commonform.org',
+  publisher: 'kemitchell',
+  project: 'orthodox-software-copyright-license',
+  edition: '1e',
+  upgrade: 'yes',
+  substitutions: {
+    terms: {
+      'Licensor': 'Vendor',
+      'Licensee': 'Customer',
+      'Program': 'Software'
+    },
+    headings: {
+      'Express Warranties': 'Guarantees'
+    }
+  }
+}))
+
 assert(predicate.text('Text'))
 assert(!predicate.text(null))
 ```

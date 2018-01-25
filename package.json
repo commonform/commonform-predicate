@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "devDependencies": {
-    "defence-cli": "~1.0.1",
-    "replace-require-self": "~1.0.0",
+    "defence-cli": "^1.0.5",
+    "replace-require-self": "^1.0.1",
     "standard": "^8.0.0-beta.5"
   },
   "files": [
@@ -24,6 +24,7 @@
   "license": "Apache-2.0",
   "repository": "commonform/commonform-predicate",
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "test": "defence -i javascript README.md | replace-require-self | node"
   }
 }
