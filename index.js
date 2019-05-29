@@ -4,7 +4,7 @@ var has = function (key) {
   }
 }
 
-var types = ['blank', 'definition', 'reference', 'use']
+var types = [ 'blank', 'definition', 'reference', 'use' ]
 
 types.forEach(function (type) {
   exports[type] = has(type)
