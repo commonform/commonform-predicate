@@ -1,4 +1,4 @@
-function has (key) {
+function hasProperty (key) {
   return function (argument) {
     return argument.hasOwnProperty(key)
   }
@@ -7,14 +7,14 @@ function has (key) {
 var types = [ 'blank', 'definition', 'reference', 'use' ]
 
 types.forEach(function (type) {
-  exports[type] = has(type)
+  exports[type] = hasProperty(type)
 })
 
-exports.child = has('form')
+exports.child = hasProperty('form')
 
-exports.component = has('repository')
+exports.component = hasProperty('repository')
 
-exports.form = has('content')
+exports.form = hasProperty('content')
 
 exports.text = function (argument) {
   return typeof argument === 'string'
