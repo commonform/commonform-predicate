@@ -21,7 +21,7 @@
     "law",
     "predicates"
   ],
-  "license": "Apache-2.0",
+  "license": "BlueOak-1.0.0",
   "repository": "commonform/commonform-predicate",
   "scripts": {
     "lint": "standard",
