@@ -1,6 +1,4 @@
-var types = [ 'blank', 'definition', 'reference', 'use' ]
-
-types.forEach(function (type) {
+[ 'blank', 'definition', 'reference', 'use' ].forEach(function (type) {
   exports[type] = hasProperty(type)
 })
 
