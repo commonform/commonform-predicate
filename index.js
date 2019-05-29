@@ -1,9 +1,3 @@
-function hasProperty (key) {
-  return function (argument) {
-    return argument.hasOwnProperty(key)
-  }
-}
-
 var types = [ 'blank', 'definition', 'reference', 'use' ]
 
 types.forEach(function (type) {
@@ -18,4 +12,10 @@ exports.form = hasProperty('content')
 
 exports.text = function (argument) {
   return typeof argument === 'string'
+}
+
+function hasProperty (key) {
+  return function (argument) {
+    return argument.hasOwnProperty(key)
+  }
 }
