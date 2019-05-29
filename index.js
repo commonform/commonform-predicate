@@ -1,4 +1,4 @@
-var has = function (key) {
+function has (key) {
   return function (argument) {
     return argument.hasOwnProperty(key)
   }
