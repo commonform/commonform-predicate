@@ -6,7 +6,7 @@ var has = require('has')
 
 exports.child = hasProperty('form')
 
-exports.component = hasProperty('repository')
+exports.component = hasProperty('component')
 
 exports.form = hasProperty('content')
 

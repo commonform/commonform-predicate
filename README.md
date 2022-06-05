@@ -29,11 +29,8 @@ assert(!predicate.child(invalid))
 
 assert(predicate.component({
   heading: 'Warranty Disclaimer',
-  repository: 'api.commonform.org',
-  publisher: 'kemitchell',
-  project: 'orthodox-software-copyright-license',
-  edition: '1e',
-  upgrade: 'yes',
+  component: 'https://commonform.org/kemitchell/orthodox-software-copyright-license',
+  version: '1.0.0',
   substitutions: {
     terms: {
       Licensor: 'Vendor',
