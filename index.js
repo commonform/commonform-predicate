@@ -1,12 +1,11 @@
 var has = require('has')
 
-;['blank', 'definition', 'reference', 'use'].forEach(function (type) {
-  exports[type] = hasProperty(type)
-})
+;['blank', 'definition', 'reference', 'use', 'component']
+  .forEach(function (type) {
+    exports[type] = hasProperty(type)
+  })
 
 exports.child = hasProperty('form')
-
-exports.component = hasProperty('component')
 
 exports.form = hasProperty('content')
 
