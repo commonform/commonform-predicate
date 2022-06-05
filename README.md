@@ -10,7 +10,7 @@ If you a know a form object is valid, and need to pick out specific content elem
 var assert = require('assert')
 
 var invalid = { invalid: 'object' }
-var validForm = { content: [ 'Valid text' ] }
+var validForm = { content: ['Valid text'] }
 
 assert(predicate.definition({ definition: 'Term' }))
 assert(!predicate.definition(invalid))
@@ -36,9 +36,9 @@ assert(predicate.component({
   upgrade: 'yes',
   substitutions: {
     terms: {
-      'Licensor': 'Vendor',
-      'Licensee': 'Customer',
-      'Program': 'Software'
+      Licensor: 'Vendor',
+      Licensee: 'Customer',
+      Program: 'Software'
     },
     headings: {
       'Express Warranties': 'Guarantees'

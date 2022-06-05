@@ -1,4 +1,6 @@
-[ 'blank', 'definition', 'reference', 'use' ].forEach(function (type) {
+var has = require('has')
+
+;['blank', 'definition', 'reference', 'use'].forEach(function (type) {
   exports[type] = hasProperty(type)
 })
 
@@ -14,6 +16,6 @@ exports.text = function (argument) {
 
 function hasProperty (key) {
   return function (argument) {
-    return argument.hasOwnProperty(key)
+    return has(argument, key)
   }
 }
