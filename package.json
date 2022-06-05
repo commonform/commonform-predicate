@@ -4,7 +4,7 @@
   "version": "3.0.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "devDependencies": {
-    "defence-cli": "^1.0.5",
+    "defence-cli": "^3.0.1",
     "replace-require-self": "^1.0.1",
     "standard": "^8.6.0",
     "standard-markdown": "^5.0.1"
