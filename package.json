@@ -27,5 +27,8 @@
   "scripts": {
     "lint": "standard && standard-markdown README.md",
     "test": "defence -i javascript README.md | replace-require-self | node"
+  },
+  "dependencies": {
+    "has": "^1.0.3"
   }
 }
