@@ -5,12 +5,12 @@ var has = require('has')
     exports[type] = hasProperty(type)
   })
 
-exports.url = function (argument) {
+exports.link = function (argument) {
   return (
-    has(argument, 'url') &&
+    has(argument, 'link') &&
     (
-      argument.url.indexOf('https://') === 0 ||
-      argument.url.indexOf('http://') === 0
+      argument.link.indexOf('https://') === 0 ||
+      argument.link.indexOf('http://') === 0
     )
   )
 }
