@@ -5,6 +5,16 @@ var has = require('has')
     exports[type] = hasProperty(type)
   })
 
+exports.url = function (argument) {
+  return (
+    has(argument, 'url') &&
+    (
+      argument.url.indexOf('https://') === 0 ||
+      argument.url.indexOf('http://') === 0
+    )
+  )
+}
+
 exports.child = hasProperty('form')
 
 exports.form = hasProperty('content')

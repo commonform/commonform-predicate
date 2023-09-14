@@ -24,6 +24,10 @@ assert(!predicate.reference(invalid))
 assert(predicate.blank({ blank: 'Value' }))
 assert(!predicate.blank(invalid))
 
+assert(predicate.url({ url: 'https://example.com' }))
+assert(predicate.url({ url: 'http://example.com' }))
+assert(!predicate.url(invalid))
+
 assert(predicate.child({ heading: 'Summary', form: validForm }))
 assert(!predicate.child(invalid))
 
