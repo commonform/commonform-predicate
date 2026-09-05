@@ -13,6 +13,7 @@
   "license": "BlueOak-1.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "repository": "commonform/commonform-predicate",
+  "main": "index.js",
   "files": [
     "LICENSE",
     "README.md",
