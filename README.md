@@ -1,5 +1,5 @@
 ```javascript
-var predicate = require('commonform-predicate')
+import * as predicate from 'commonform-predicate'
 ```
 
 The exported functions can be used to find the type of a `content` array element in a known-valid form, to avoid doing all that's necessary to ensure validity.
@@ -7,10 +7,10 @@ The exported functions can be used to find the type of a `content` array element
 If you a know a form object is valid, and need to pick out specific content elements, use `commonform-predicate`, not `commonform-validate`.
 
 ```javascript
-var assert = require('assert')
+import assert from 'node:assert'
 
-var invalid = { invalid: 'object' }
-var validForm = { content: ['Valid text'] }
+const invalid = { invalid: 'object' }
+const validForm = { content: ['Valid text'] }
 
 assert(predicate.definition({ definition: 'Term' }))
 assert(!predicate.definition(invalid))

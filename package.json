@@ -1,20 +1,7 @@
 {
   "name": "commonform-predicate",
-  "description": "distinguish Common Form content objects",
   "version": "6.0.0",
-  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
-  "devDependencies": {
-    "defence-cli": "^3.0.1",
-    "replace-require-self": "^1.0.1",
-    "standard": "^8.6.0",
-    "standard-markdown": "^5.0.1"
-  },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "index.js"
-  ],
-  "homepage": "https://commonform.github.io",
+  "description": "distinguish Common Form content objects",
   "keywords": [
     "contracts",
     "document assembly",
@@ -22,13 +9,22 @@
     "law",
     "predicates"
   ],
+  "homepage": "https://commonform.github.io",
   "license": "BlueOak-1.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "repository": "commonform/commonform-predicate",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "type": "module",
   "scripts": {
     "lint": "standard && standard-markdown README.md",
-    "test": "defence -i javascript README.md | replace-require-self | node"
+    "test": "defence -i javascript README.md | sed \"s!'commonform-predicate'!'./index.js'!\" | node"
   },
-  "dependencies": {
-    "has": "^1.0.3"
+  "devDependencies": {
+    "defence-cli": "^3.0.1",
+    "replace-require-self": "^1.0.1"
   }
 }

@@ -1,30 +1,38 @@
-var has = require('has')
+export function blank(argument) {
+  return Object.hasOwn(argument, "blank");
+}
 
-;['blank', 'definition', 'reference', 'use', 'component']
-  .forEach(function (type) {
-    exports[type] = hasProperty(type)
-  })
+export function definition(argument) {
+  return Object.hasOwn(argument, "definition");
+}
 
-exports.link = function (argument) {
+export function reference(argument) {
+  return Object.hasOwn(argument, "reference");
+}
+
+export function use(argument) {
+  return Object.hasOwn(argument, "use");
+}
+
+export function component(argument) {
+  return Object.hasOwn(argument, "component");
+}
+
+export function link(argument) {
   return (
-    has(argument, 'link') &&
-    (
-      argument.link.indexOf('https://') === 0 ||
-      argument.link.indexOf('http://') === 0
-    )
-  )
+    Object.hasOwn(argument, "link") &&
+    (argument.link.indexOf("https://") === 0 || argument.link.indexOf("http://") === 0)
+  );
 }
 
-exports.child = hasProperty('form')
-
-exports.form = hasProperty('content')
-
-exports.text = function (argument) {
-  return typeof argument === 'string'
+export function child(argument) {
+  return Object.hasOwn(argument, "form");
 }
 
-function hasProperty (key) {
-  return function (argument) {
-    return has(argument, key)
-  }
+export function form(argument) {
+  return Object.hasOwn(argument, "content");
+}
+
+export function text(argument) {
+  return typeof argument === "string";
 }
