@@ -22,7 +22,7 @@
   "type": "module",
   "scripts": {
     "lint": "standard && standard-markdown README.md",
-    "test": "defence -i javascript README.md | sed \"s!'commonform-predicate'!'./index.js'!\" | node"
+    "test": "defence -i javascript README.md | sed 's!from \"commonform-predicate\"!from \"./index.js\"!' | node"
   },
   "devDependencies": {
     "defence-cli": "^3.0.1",
